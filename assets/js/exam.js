@@ -17,7 +17,7 @@ window.onload = function () {
 };
 
 //Fetch the JSON file from local storage
-fetch("questions.json")
+fetch("./questions.json")
   .then((response) => response.json())
   .then((data) => {
     //Filling the questions in an array
@@ -192,7 +192,7 @@ function submitAnswers(data) {
     let msg = document.getElementById("message");
     msg.style.display = "none";
 
-    location.href = "results.html"
+    location.href = "./results.html"
   }
   else{
   let msg = document.getElementById("message");
