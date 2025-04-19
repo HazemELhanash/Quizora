@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-cotainer">
+     <div class="nav-img">
+        <img src="assets/images/icon.jpeg" alt="navbar icon">
+     </div>
+            <div class="nav-title">
+                <h1>UIZORA</h1>
+            </div>
+        </div>
+    </nav>
+    <div class="maincontainer">
+        <div class="header">
+            <div class="img">
+                <img src="assets/Images/Login-amico.png" alt="">
+            </div>
+            <div class="title">
+                <h1>Login</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <form>
+                <div class="input">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="text" name="email" id="email" placeholder="ex:name@gmail.com">
+                    <div id="alertEmail" class="alert">Please Enter Valid Email</div>
+                </div>
+
+                <div class="input">
+                    <label for="password">Password <span>*</span></label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <div id="alertPassword" class="alert">Enter Strong Password</div>
+                </div>
+
+                <div class="text-center" id="message"></div>
+
+                <div class="btn">
+                    <button type="submit" id="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

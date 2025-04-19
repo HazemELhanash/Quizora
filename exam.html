@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/examPage.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-cotainer">
+        <div class="logo">
+          <div class="nav-img">
+            <img src="assets/images/icon.jpeg" alt="navbar icon" />
+          </div>
+          <div class="nav-title">
+            <h1>UIZORA</h1>
+          </div>
+        </div>
+        <div class="timer">
+          <div id="timer">00:00:00</div>
+        </div>
+      </div>
+      
+    </nav>
+    <div class="container">
+      <div id="progress">
+      </div>
+      <section class="question-box">
+        <div class="questionBox-wflag">
+          <div class="questionBox-questions">
+            <div class="question-title">
+              <h2>question</h2>
+              <div id="flage">
+                <i class="fa-solid fa-flag"></i> 
+              </div>
+            </div>
+            <div class="questions">
+              <input type="radio" name="answer" id="1" value="1" />
+              <span>ans1</span>
+            </div>
+            <div class="questions">
+              <input type="radio" name="answer" id="2" value="2" />
+              <span>ans2</span>
+            </div>
+            <div class="questions">
+              <input type="radio" name="answer" id="3" value="3" />
+              <span>ans3</span>
+            </div>
+            <div class="questions">
+              <input type="radio" name="answer" id="4" value="4" />
+              <span>ans4</span>
+            </div>
+          </div>
+        </div>
+        <div class="nav-btns">
+          <div class="next-prev">
+            <div class="btn">
+              <button class="button" id="prev">⇦ prev</button>
+            </div>
+            <div class="btn">
+              <button class="button" id="next">next ⇨</button>
+            </div>
+          </div>
+          <div class="submit">
+            <div class="btn">
+              <button class="button" id="submit">submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="message">
+          <h1 id="message">You Have to answers All The Flaged Questions</h1>
+        </div>
+      </section>
+    </div>
+
+    <script src="assets/js/exam.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  </body>
+</html>

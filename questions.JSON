@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": ["Paris", "London", "Berlin", "Madrid"],
+      "answer": "Paris"
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Jupiter", "Venus"],
+      "answer": "Mars"
+    },
+    {
+      "id": 3,
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "answer": "Pacific Ocean"
+    },
+    {
+      "id": 4,
+      "question": "The team has only one girl, what's her name?",
+      "options": [
+        "Mariam",
+        "Nada",
+        "Enjy",
+        "Karma"
+      ],
+      "answer": "Mariam"
+    },
+    {
+      "id": 5,
+      "question": "What is our system name?",
+      "options": [
+        "Quizora",
+        "Testy",
+        "Examina",
+        "Knowledgee"
+      ],
+      "answer": "Quizora"
+    },
+    {
+      "id": 6,
+      "question": "Which team will be the best?",
+      "options": [
+        "bulk",
+        "knowledgee",
+        "Quizora",
+        "WoW Exam"
+      ],
+      "answer": "Quizora"
+    },
+    {
+      "id": 7,
+      "question": "Who is the smartest programmer ever?",
+      "options": [
+        "Magdy",
+        "Emad",
+        "Ziad",
+        "Mostafa"
+      ],
+      "answer": "Ziad"
+    },
+    {
+      "id": 8,
+      "question": "Who is the smartest frontend developer?",
+      "options": [
+        "Malak",
+        "Yasser",
+        "Adham",
+        "Hazem"
+      ],
+      "answer": "Hazem"
+    },
+    {
+      "id": 9,
+      "question": "What is the name of the course instructor?",
+      "options": [
+        "Eng. Menna Shata",
+        "Eng. Asmaa Elkhateeb",
+        "Eng. Mohamed Sayed",
+        "Eng. Emad Ahmed"
+      ],
+      "answer": "Eng. Menna Shata"
+    },
+    {
+      "id": 10,
+      "question": "Rate this exam?",
+      "options": [
+        "Hard",
+        "Medium",
+        "Easy",
+        "Super easy"
+      ],
+      "answer": "Super easy"
+    }
+  ]
+}

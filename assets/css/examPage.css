@@ -1,0 +1,165 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open sans", sans-serif;
+}
+:root{
+    --blue: #003092;
+    --corn: #6495ed;
+    --white: #f8f8f7;
+    --orange: #FFAB5B;
+    --gray:  #d1d1d13d;
+    --blur:   blur(5px) ;
+    --navbackgroung: #fcfcfc;
+}
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+/* NAVBAR */
+.nav-cotainer{
+    width: 100%;
+    display: flex;
+    padding: 25px;
+    padding-right: 10px;
+    align-items: center;
+}
+.logo
+{
+    display: flex;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+}
+.nav-img{
+    width: 7%;
+    margin-left: 43%;
+}
+.nav-img img{
+    width: 100%;
+}
+
+/* END NAVBAR */
+.nav-cotainer .timer{
+    margin-right: 50px;
+}
+.nav-cotainer #timer {
+    font-size: 2em;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.question-box
+{
+    width: 100%;
+    padding: 25px;
+    padding-right: 10px;
+    
+}
+.questionBox-questions{
+    width: 100%;
+}
+.question-title{
+    display: flex;
+    margin-bottom: 15px;
+}
+.nav-btns
+{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.next-prev{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-right: 15%;
+}
+.btn{
+    padding: 10px;
+}
+
+.btn button{
+    padding: 16px;
+    border:  1px solid var(--gray);
+    border-radius: 25px;
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.submit {
+    margin-left: 20%;
+}
+.submit .btn button{
+    background-color: var(--corn);
+
+}
+.question-box h2
+{
+    width: 80%;
+}
+.questions
+{
+width: 80%;
+margin-bottom: 15px;
+
+}
+
+.questionBox-questions
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* FLAGSTYLE */
+.question-title .flage {
+    cursor: pointer;
+}
+.flageGreen{
+    background-color: var(--orange);
+    border: 1px solid;
+    padding: 3px;
+}
+/* ENDFLAGSTYLE */
+#progress {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#progress div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+.selected
+{
+    border: 3px solid cornflowerblue;
+}
+.completed
+{
+    background-color: #d4edda;
+}
+.message h1{
+    color: red;
+    padding-top: 16px;
+    text-align: center;
+    display: none;
+}
