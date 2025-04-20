@@ -33,6 +33,21 @@ fetch("./questions.json")
       div.textContent = i + 1;
       div.classList.add("progress-box"); // Add a class for styling
       div.id = String(i);
+      div.addEventListener("click", function () {
+        questionNumber = Number(div.id);
+        inputs.forEach((input) => {
+          input.checked = false;
+        });
+        writeQuestion(questionArray[questionNumber]);
+        const currentQuestionBox = document.getElementById(
+          String(questionNumber)
+        );
+        if (!currentQuestionBox.classList.contains("flageGreen")) {
+          flage.classList.remove("flageGreen");
+        } else {
+          flage.classList.add("flageGreen");
+        }
+      });
       progressBar.appendChild(div);
     }
     var flage = document.getElementById("flage");
