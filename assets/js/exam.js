@@ -10,6 +10,7 @@ let spans;
 let score = 0;
 let progressBar;
 let counter = 0;
+let timeoutflag= false;
 window.onload = function () {
   const duration = 60 * 60; // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
@@ -131,8 +132,9 @@ fetch("./questions.json")
 
     //Give Timer for the Exam
     setTimeout(function () {
+      timeoutflag=true;
       submitAnswers(data);
-    }, 3600000);
+    }, 10000);
   })
   .catch((error) => console.error("Error fetching JSON:", error));
 
@@ -157,16 +159,18 @@ function writeQuestion(questionOBJ) {
       currentQuestionBox.classList.add("completed");
     }
   }
-
+  //select all the inputs and text
   spans = document.querySelectorAll(".questions > span");
   inputs = document.querySelectorAll('input[type="radio"]');
 
+  //clone the inputs and nodes and write the new questions
   for (let i = 0; i < 4; i++) {
     spans[i].textContent = questionOBJ.options[i];
     let newInput = inputs[i].cloneNode(true);
     newInput.value = questionOBJ.options[i];
     newInput.checked = answerArray[questionNumber] === newInput.value;
 
+    //add event listener to the inputs
     newInput.addEventListener("change", function () {
       answerArray[questionNumber] = newInput.value;
 
@@ -191,13 +195,15 @@ function shuffleArray(array) {
   }
   return array;
 }
+//function to calculate the score
 function validateAnswer(questionOBJ, answer) {
   if (questionOBJ.answer === answer) {
     score++;
   }
 }
+//function to submit the answers when time runs out or pressing submit
 function submitAnswers(data) {
-  if (counter === 0) {
+  if (counter === 0 || timeoutflag === true) {
     localStorage.setItem("questions", JSON.stringify(data));
     localStorage.setItem("userAnswers", JSON.stringify(answerArray));
     for (let i = 0; i < questionArray.length; i++) {
@@ -215,6 +221,7 @@ function submitAnswers(data) {
   }
 }
 
+//function to run the exam timer
 function startTimer(duration, display) {
   let timer = duration,
     hours,
