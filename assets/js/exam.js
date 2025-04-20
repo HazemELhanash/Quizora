@@ -159,16 +159,18 @@ function writeQuestion(questionOBJ) {
       currentQuestionBox.classList.add("completed");
     }
   }
-
+  //select all the inputs and text
   spans = document.querySelectorAll(".questions > span");
   inputs = document.querySelectorAll('input[type="radio"]');
 
+  //clone the inputs and nodes and write the new questions
   for (let i = 0; i < 4; i++) {
     spans[i].textContent = questionOBJ.options[i];
     let newInput = inputs[i].cloneNode(true);
     newInput.value = questionOBJ.options[i];
     newInput.checked = answerArray[questionNumber] === newInput.value;
 
+    //add event listener to the inputs
     newInput.addEventListener("change", function () {
       answerArray[questionNumber] = newInput.value;
 
@@ -193,11 +195,13 @@ function shuffleArray(array) {
   }
   return array;
 }
+//function to calculate the score
 function validateAnswer(questionOBJ, answer) {
   if (questionOBJ.answer === answer) {
     score++;
   }
 }
+//function to submit the answers when time runs out or pressing submit
 function submitAnswers(data) {
   if (counter === 0 || timeoutflag === true) {
     localStorage.setItem("questions", JSON.stringify(data));
@@ -217,6 +221,7 @@ function submitAnswers(data) {
   }
 }
 
+//function to run the exam timer
 function startTimer(duration, display) {
   let timer = duration,
     hours,
