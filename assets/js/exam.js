@@ -10,6 +10,7 @@ let spans;
 let score = 0;
 let progressBar;
 let counter = 0;
+let timeoutflag= false;
 window.onload = function () {
   const duration = 60 * 60; // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
@@ -131,8 +132,9 @@ fetch("questions.json")
 
     //Give Timer for the Exam
     setTimeout(function () {
+      timeoutflag=true;
       submitAnswers(data);
-    }, 3600000);
+    }, 10000);
   })
   .catch((error) => console.error("Error fetching JSON:", error));
 
@@ -197,7 +199,7 @@ function validateAnswer(questionOBJ, answer) {
   }
 }
 function submitAnswers(data) {
-  if (counter === 0) {
+  if (counter === 0 || timeoutflag === true) {
     localStorage.setItem("questions", JSON.stringify(data));
     localStorage.setItem("userAnswers", JSON.stringify(answerArray));
     for (let i = 0; i < questionArray.length; i++) {
