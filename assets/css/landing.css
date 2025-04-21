@@ -1,0 +1,123 @@
+:root {
+  --blue: #003092;
+  --corn: #6495ed;
+  --white: #f8f8f7;
+  --orange: #ffab5b;
+  --gray: #d1d1d13d;
+  --blur: blur(5px);
+  --navbackgroung: #fcfcfc;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body h2 {
+  margin-top: 10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.signin-register {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  gap: 10px;
+  padding: 10px;
+}
+.signin-register button {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: HSL(238, 33%, 44%);
+  color: white;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-weight: bold;
+}
+.signin-register button:hover {
+  background-color: HSL(238, 53%, 44%);
+  cursor: pointer;
+}
+/* NAVBAR */
+.nav-cotainer {
+  width: 70%;
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  background-color: var(--navbackgroung);
+}
+.nav-img {
+  width: 5%;
+}
+.nav-img img {
+  width: 100%;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 30px;
+}
+.intro h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.intro p {
+  width: 50%;
+  text-align: center;
+  text-wrap: balance;
+}
+.intro button {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: HSL(238, 33%, 44%);
+  color: white;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-weight: bold;
+}
+.intro button:hover {
+  background-color: HSL(238, 53%, 44%);
+  cursor: pointer;
+}
+.feature-box {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  gap: 20px;
+  margin-top: 10px;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 1px solid HSL(238, 33%, 44%);
+  padding: 10px;
+  gap: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+.feature p {
+  width: 90%;
+  text-wrap: balance;
+  padding: 10px;
+}
