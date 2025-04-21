@@ -134,7 +134,7 @@ fetch("./questions.json")
     setTimeout(function () {
       timeoutflag=true;
       submitAnswers(data);
-    }, 10000);
+    }, 3600000);
   })
   .catch((error) => console.error("Error fetching JSON:", error));
 
