@@ -19,6 +19,7 @@ body {
 }
 body h2 {
   margin-top: 10px;
+  font-size: 2.4rem;
 }
 .header {
   display: flex;
@@ -80,9 +81,12 @@ body h2 {
   text-align: center;
 }
 .intro p {
-  width: 50%;
+  width: 60%;
   text-align: center;
   text-wrap: balance;
+  font-weight: 400;
+  color: #5c5050;
+  line-height: 25px;
 }
 .intro button {
   padding: 20px;
@@ -94,11 +98,13 @@ body h2 {
   font-weight: 500;
   font-style: normal;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 .intro button:hover {
   background-color: HSL(238, 53%, 44%);
   cursor: pointer;
 }
+
 .feature-box {
   display: flex;
   justify-content: center;
@@ -116,8 +122,38 @@ body h2 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
+.feature h3 {
+  font-size: 1.3rem;
+}
 .feature p {
   width: 90%;
   text-wrap: balance;
   padding: 10px;
+  font-weight: 400;
+  color: #5c5050;
+  line-height: 25px;
+}
+@media (max-width: 768px) {
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .feature {
+    width: 90%;
+  }
+  .nav-img {
+    width: 10%;
+  }
+  .intro h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .signin-register button
+  {
+    height: 50%;
+    padding: 10px;
+  }
 }
