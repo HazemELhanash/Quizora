@@ -25,7 +25,10 @@ fetch("questions.json")
     data.questions = shuffleArray(data.questions);
     questionArray = data.questions;
     answerArray = new Array(questionArray.length).fill(null);
-
+    //Fetch buttons
+    nextButton = document.getElementById("next");
+    prevButton = document.getElementById("prev");
+    submitButton = document.getElementById("submit");
     //Fetch the progress bar
     const progressBar = document.getElementById("progress");
 
@@ -79,10 +82,6 @@ fetch("questions.json")
     //Call writeQuestion to render the questions
     writeQuestion(questionArray[questionNumber]);
 
-    //Fetch buttons
-    nextButton = document.getElementById("next");
-    prevButton = document.getElementById("prev");
-    submitButton = document.getElementById("submit");
     //Add event listener for the next button
     nextButton.addEventListener("click", function () {
       //Check the boundary condition
@@ -93,12 +92,12 @@ fetch("questions.json")
         });
         questionNumber++;
         writeQuestion(questionArray[questionNumber]);
-        const currentQuestionBox = document.getElementById(String(questionNumber));
-        if(!currentQuestionBox.classList.contains("flageGreen"))
-        {
-          flage.classList.remove("flageGreen"); 
-        }
-        else{
+        const currentQuestionBox = document.getElementById(
+          String(questionNumber)
+        );
+        if (!currentQuestionBox.classList.contains("flageGreen")) {
+          flage.classList.remove("flageGreen");
+        } else {
           flage.classList.add("flageGreen");
         }
       }
@@ -132,7 +131,7 @@ fetch("questions.json")
 
     //Give Timer for the Exam
     setTimeout(function () {
-      timeoutflag=true;
+      timeoutflag = true;
       submitAnswers(data);
     }, 3600000);
   })
@@ -185,6 +184,7 @@ function writeQuestion(questionOBJ) {
   }
 
   inputs = document.querySelectorAll('input[type="radio"]');
+  updateNavButtons();
 }
 
 //Shuffle array elements
@@ -242,4 +242,17 @@ function startTimer(duration, display) {
       timer = duration;
     }
   }, 1000);
+}
+function updateNavButtons() {
+  if (questionNumber === 0) {
+    prevButton.style.display = "none";
+  } else {
+    prevButton.style.display = "block";
+  }
+
+  if (questionNumber === questionArray.length - 1) {
+    nextButton.style.display = "none";
+  } else {
+    nextButton.style.display = "block";
+  }
 }
