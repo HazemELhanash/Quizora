@@ -11,7 +11,7 @@ let score = 0;
 let progressBar;
 let counter = 0;
 window.onload = function () {
-  const duration = 60 * 60; // Timer duration in seconds (1 hour)
+  const duration = 5 // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
   startTimer(duration, display);
 };
@@ -24,7 +24,6 @@ fetch("./questions.json")
     data.questions = shuffleArray(data.questions);
     questionArray = data.questions;
     answerArray = new Array(questionArray.length).fill(null);
-
     //Fetch the progress bar
     const progressBar = document.getElementById("progress");
 
@@ -33,6 +32,21 @@ fetch("./questions.json")
       div.textContent = i + 1;
       div.classList.add("progress-box"); // Add a class for styling
       div.id = String(i);
+      div.addEventListener("click", function () {
+        questionNumber = Number(div.id);
+        inputs.forEach((input) => {
+          input.checked = false;
+        });
+        writeQuestion(questionArray[questionNumber]);
+        const currentQuestionBox = document.getElementById(
+          String(questionNumber)
+        );
+        if (!currentQuestionBox.classList.contains("flageGreen")) {
+          flage.classList.remove("flageGreen");
+        } else {
+          flage.classList.add("flageGreen");
+        }
+      });
       progressBar.appendChild(div);
     }
     var flage = document.getElementById("flage");
@@ -205,7 +219,7 @@ function startTimer(duration, display) {
     hours,
     minutes,
     seconds;
-  setInterval(function () {
+     setInterval(function () {
     hours = Math.floor(timer / 3600);
     minutes = Math.floor((timer % 3600) / 60);
     seconds = timer % 60;
@@ -218,6 +232,7 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       timer = duration;
+      submitAnswers({ questions: questionArray});
     }
   }, 1000);
 }
