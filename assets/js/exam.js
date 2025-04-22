@@ -12,7 +12,7 @@ let progressBar;
 let counter = 0;
 let timeoutflag= false;
 window.onload = function () {
-  const duration = 5 // Timer duration in seconds (1 hour)
+  const duration = 3600 // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
   startTimer(duration, display);
 };
@@ -128,12 +128,6 @@ fetch("./questions.json")
     submitButton.addEventListener("click", function () {
       submitAnswers(data);
     });
-
-    //Give Timer for the Exam
-    setTimeout(function () {
-      timeoutflag = true;
-      submitAnswers(data);
-    }, 3600000);
   })
   .catch((error) => console.error("Error fetching JSON:", error));
 
