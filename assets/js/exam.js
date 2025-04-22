@@ -12,7 +12,7 @@ let progressBar;
 let counter = 0;
 let timeoutflag= false;
 window.onload = function () {
-  const duration = 60 * 60; // Timer duration in seconds (1 hour)
+  const duration = 5 // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
   startTimer(duration, display);
 };
@@ -25,7 +25,6 @@ fetch("./questions.json")
     data.questions = shuffleArray(data.questions);
     questionArray = data.questions;
     answerArray = new Array(questionArray.length).fill(null);
-
     //Fetch the progress bar
     const progressBar = document.getElementById("progress");
 
@@ -227,7 +226,7 @@ function startTimer(duration, display) {
     hours,
     minutes,
     seconds;
-  setInterval(function () {
+     setInterval(function () {
     hours = Math.floor(timer / 3600);
     minutes = Math.floor((timer % 3600) / 60);
     seconds = timer % 60;
@@ -240,6 +239,7 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       timer = duration;
+      submitAnswers({ questions: questionArray});
     }
   }, 1000);
 }

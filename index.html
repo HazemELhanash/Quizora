@@ -41,12 +41,12 @@
             </div>
             <div class="input">
                 <label for="email">Email <span>*</span></label>
-                <input type="text" name="email" id="email" placeholder="ex:name@gmail.com">
+                <input type="email" name="email" id="email" placeholder="ex:name@gmail.com">
                 <div id="alertEmail" class="alert">Please Enter Valid Email</div>
             </div>
             <div class="input">
                 <label for="password">Password <span>*</span></label>
-                <input onchange="onChange()" type="password" name="password" id="password" placeholder="password">
+                <input type="password" name="password" id="password" placeholder="password">
                 <div id="alertPassword" class="alert">Enter Strong Password</div>
             </div>
             <div class="input">
@@ -56,6 +56,10 @@
             <div class="text-center" id="message"></div>
            <div class="btn">
             <button type="button" onclick="SignUp(event)">Register Now</button>
+        </div>
+        <div class="login">
+            <span> Already have an account?<a href="login.html">Login</a>
+            </span>
         </div>
     </form>
 </div>
