@@ -21,14 +21,8 @@ body h2 {
   margin-top: 10px;
   font-size: 2.4rem;
 }
-.header {
-  display: flex;
-  align-items: center;
-}
 .signin-register {
   display: flex;
-  justify-content: flex-end;
-  width: 30%;
   gap: 10px;
   padding: 10px;
 }
@@ -49,14 +43,14 @@ body h2 {
 }
 /* NAVBAR */
 .nav-cotainer {
-  width: 70%;
   display: flex;
-  padding: 25px;
+  padding: 20px;
   align-items: center;
   background-color: var(--navbackgroung);
+  justify-content: space-between;
 }
 .nav-img {
-  width: 5%;
+  width: 170px;
 }
 .nav-img img {
   width: 100%;
@@ -98,7 +92,7 @@ body h2 {
   font-weight: 500;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .intro button:hover {
   background-color: HSL(238, 53%, 44%);
@@ -110,7 +104,8 @@ body h2 {
   justify-content: center;
   width: 80%;
   gap: 20px;
-  margin-top: 10px;
+  margin-top: 5px;
+
 }
 .feature {
   display: flex;
@@ -121,6 +116,7 @@ body h2 {
   gap: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+
 }
 .feature h3 {
   font-size: 1.3rem;
@@ -132,6 +128,12 @@ body h2 {
   font-weight: 400;
   color: #5c5050;
   line-height: 25px;
+}
+.logo
+{
+  display: flex;
+  align-items: center;
+  width: 60%;
 }
 @media (max-width: 768px) {
   .feature-box {
@@ -145,15 +147,16 @@ body h2 {
     width: 90%;
   }
   .nav-img {
-    width: 10%;
+    width: 130px;
   }
   .intro h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     text-align: center;
   }
   .signin-register button
   {
-    height: 50%;
-    padding: 10px;
+    height: 60%;
+    padding: 7px;
+    font-size: 0.9rem;
   }
 }
