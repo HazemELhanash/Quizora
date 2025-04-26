@@ -2,103 +2,63 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the capital of France?",
-      "options": ["Paris", "London", "Berlin", "Madrid"],
-      "answer": "Paris"
+      "question": "What is 25 + 17?",
+      "options": ["42", "43", "41", "44"],
+      "answer": "42"
     },
     {
       "id": 2,
-      "question": "Which planet is known as the Red Planet?",
-      "options": ["Earth", "Mars", "Jupiter", "Venus"],
-      "answer": "Mars"
+      "question": "What is 9 × 7?",
+      "options": ["56", "63", "72", "49"],
+      "answer": "63"
     },
     {
       "id": 3,
-      "question": "What is the largest ocean on Earth?",
-      "options": [
-        "Atlantic Ocean",
-        "Indian Ocean",
-        "Arctic Ocean",
-        "Pacific Ocean"
-      ],
-      "answer": "Pacific Ocean"
+      "question": "What is the square root of 144?",
+      "options": ["10", "12", "14", "16"],
+      "answer": "12"
     },
     {
       "id": 4,
-      "question": "The team has only one girl, what's her name?",
-      "options": [
-        "Mariam",
-        "Nada",
-        "Enjy",
-        "Karma"
-      ],
-      "answer": "Mariam"
+      "question": "What is 81 ÷ 9?",
+      "options": ["7", "8", "9", "10"],
+      "answer": "9"
     },
     {
       "id": 5,
-      "question": "What is our system name?",
-      "options": [
-        "Quizora",
-        "Testy",
-        "Examina",
-        "Knowledgee"
-      ],
-      "answer": "Quizora"
+      "question": "What is 15²?",
+      "options": ["200", "215", "225", "250"],
+      "answer": "225"
     },
     {
       "id": 6,
-      "question": "Which team will be the best?",
-      "options": [
-        "bulk",
-        "knowledgee",
-        "Quizora",
-        "WoW Exam"
-      ],
-      "answer": "Quizora"
+      "question": "What is 100 - 37?",
+      "options": ["63", "67", "73", "57"],
+      "answer": "63"
     },
     {
       "id": 7,
-      "question": "Who is the smartest programmer ever?",
-      "options": [
-        "Magdy",
-        "Emad",
-        "Ziad",
-        "Mostafa"
-      ],
-      "answer": "Ziad"
+      "question": "What is 8³ (8 to the power of 3)?",
+      "options": ["512", "256", "128", "1024"],
+      "answer": "512"
     },
     {
       "id": 8,
-      "question": "Who is the smartest frontend developer?",
-      "options": [
-        "Malak",
-        "Yasser",
-        "Adham",
-        "Hazem"
-      ],
-      "answer": "Hazem"
+      "question": "What is 5 × (6 + 4)?",
+      "options": ["50", "60", "40", "45"],
+      "answer": "50"
     },
     {
       "id": 9,
-      "question": "What is the name of the course instructor?",
-      "options": [
-        "Eng. Menna Shata",
-        "Eng. Asmaa Elkhateeb",
-        "Eng. Mohamed Sayed",
-        "Eng. Emad Ahmed"
-      ],
-      "answer": "Eng. Menna Shata"
+      "question": "What is the result of (45 ÷ 5) + (18 ÷ 3)?",
+      "options": ["15", "17", "19", "21"],
+      "answer": "17"
     },
     {
       "id": 10,
-      "question": "Rate this exam?",
-      "options": [
-        "Hard",
-        "Medium",
-        "Easy",
-        "Super easy"
-      ],
-      "answer": "Super easy"
+      "question": "What is 7 × 8 - 24?",
+      "options": ["32", "40", "48", "56"],
+      "answer": "32"
     }
   ]
 }
