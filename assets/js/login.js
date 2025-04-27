@@ -18,7 +18,8 @@ function checkUser() {
         if (signInEmail.value === user[i].email && signInPassword.value === user[i].password) {
             found = true;
             localStorage.setItem('userName', user[i].name);
-            location.href = 'exam.html'; 
+            sessionStorage.setItem("isLoggedIn", "true");
+            location.replace("exam.html");
             break;
         }
     }

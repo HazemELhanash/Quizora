@@ -10,9 +10,13 @@ let spans;
 let score = 0;
 let progressBar;
 let counter = 0;
-let timeoutflag= false;
+let timeoutflag = false;
 window.onload = function () {
-  const duration = 3600 // Timer duration in seconds (1 hour)
+  if (!sessionStorage.getItem("isLoggedIn")) {
+    location.replace("login.html");
+    location.replace("index.html");
+  }
+  const duration = 3600; // Timer duration in seconds (1 hour)
   const display = document.getElementById("timer");
   startTimer(duration, display);
 };
@@ -207,11 +211,10 @@ function submitAnswers(data) {
     let msg = document.getElementById("message");
     msg.style.display = "none";
 
-    location.href = "./results.html"
-  }
-  else{
-  let msg = document.getElementById("message");
-  msg.style.display = "block";
+    location.href = "./results.html";
+  } else {
+    let msg = document.getElementById("message");
+    msg.style.display = "block";
   }
 }
 
@@ -221,7 +224,7 @@ function startTimer(duration, display) {
     hours,
     minutes,
     seconds;
-     setInterval(function () {
+  setInterval(function () {
     hours = Math.floor(timer / 3600);
     minutes = Math.floor((timer % 3600) / 60);
     seconds = timer % 60;
@@ -234,7 +237,7 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       timer = duration;
-      submitAnswers({ questions: questionArray});
+      submitAnswers({ questions: questionArray });
     }
   }, 1000);
 }
